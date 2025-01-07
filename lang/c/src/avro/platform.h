@@ -27,7 +27,7 @@ extern "C" {
 /* Use this header file to include platform specific definitions */
 
 #ifdef _WIN32
-  #if _MSC_VER >= 1900
+  #if _MSC_VER < 1900
     #include <avro/msinttypes.h>
   #else
     #include <inttypes.h>
