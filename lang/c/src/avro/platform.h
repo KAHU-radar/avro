@@ -32,6 +32,7 @@ extern "C" {
   #else
     #include <inttypes.h>
   #endif
+  typedef ptrdiff_t ssize_t;
 #else
   #include <inttypes.h>
 #endif
