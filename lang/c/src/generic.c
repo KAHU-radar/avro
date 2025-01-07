@@ -2851,7 +2851,10 @@ typedef struct avro_generic_record_value_iface {
 } avro_generic_record_value_iface_t;
 
 typedef struct avro_generic_record {
-	/* The rest of the struct is taken up by the inline storage
+        #ifdef _MSC_VER
+            char dummy; // Dummy member for MSVC compliance. sizeof(char) == 1, and sizeof(struct {}) == 1 under gcc
+        #endif
+        /* The rest of the struct is taken up by the inline storage
 	 * needed for each field. */
 } avro_generic_record_t;
 
